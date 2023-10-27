@@ -7,7 +7,7 @@ flag_enc = bytes.fromhex(r.recvline().decode())
 fl =len(flag_enc)
 
 def enc(m):
-    r.sendlineafter(b"What data would you like to encrypt? ",m)
+    r.sendlineafter(b'What data would you like to encrypt? ',m)
     r.recvline()
     return bytes.fromhex(r.recvline().decode())
 
